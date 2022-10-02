@@ -1,6 +1,16 @@
-class Solution {
-    public int romanToInt(String s) {
-	int result = 0;
+import java.util.*;
+
+public class RomanToInteger2 {
+
+	public static void main(String[] args) {
+		String roman = "MXIX";
+		RomanToInteger2 test = new RomanToInteger2();
+		int result = test.romanToInt(roman);
+		System.out.println(result);
+	}
+	
+	public int romanToInt(String s) {
+		int result = 0;
         HashMap<Character, Integer> map = new HashMap<Character, Integer>();
         map.put('I',1);
         map.put('V',5);
@@ -34,9 +44,12 @@ class Solution {
         			number = 900;
         			i++;
         		}
+        		
         	}
+        	
         	result += number;
         }
         return result;
     }
+
 }
